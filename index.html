@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch for Odin Project</title>
+    <script src="etch.js" defer></script>
+    <style>
+        :root {
+            --containerWidth: 960px;
+            --boxwidth: calc(var(--containerWidth)/16);
+        }
+        #container {
+            background-color: lightgoldenrodyellow;
+            display: flex;
+            flex-wrap: wrap;
+            /* gap: 1em; */
+            width: var(--containerWidth);
+            flex: 1;
+            align-items: stretch;
+            justify-content: space-between;
+        }
+        #container div {
+            display: flex;
+            width: 100%;
+        }
+        #container div div {
+            background-color: green;
+            aspect-ratio: 1/1;
+
+        }
+        #container div div:hover {
+            background-color: lightblue
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+</html>
