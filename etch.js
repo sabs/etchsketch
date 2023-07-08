@@ -28,7 +28,10 @@ function getBackgroundColor() {
 function paintSquareTouch(e) {
     let touch = e.touches[0];
     let square = document.elementFromPoint(touch.clientX, touch.clientY);
-    square.style.backgroundColor = getBackgroundColor();
+    const container = document.getElementById('container');
+    if (container.contains(square)) {
+        square.style.backgroundColor = getBackgroundColor();
+    }
 }
 
 // this.color.addEventListener('change', setBackgroundColor, false);
