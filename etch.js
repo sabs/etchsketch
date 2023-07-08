@@ -40,3 +40,8 @@ this.gridSizeButton.addEventListener('click', function (e) {
 })
 displayGrid(16);
 
+function preventBehavior(e) {
+    e.preventDefault(); 
+};
+
+document.addEventListener("touchmove", preventBehavior, {passive: false});
