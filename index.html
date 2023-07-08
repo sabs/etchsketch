@@ -12,10 +12,14 @@
             --boxwidth: calc(var(--containerWidth)/16);
         }
 
-        @media screen and (max-width: 960px) {
+        @media screen and (max-width: 960px),(max-height: 960px) {
             :root {
-                --containerWidth: 95vw;
+                --containerWidth: 95vmin;
             }
+        }
+
+        body {
+            overflow: hidden;
         }
 
         #container {
