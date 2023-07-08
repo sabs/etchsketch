@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
             --containerWidth: 960px;
             --boxwidth: calc(var(--containerWidth)/16);
         }
+
         #container {
             background-color: lightgoldenrodyellow;
             display: flex;
@@ -19,22 +21,45 @@
             flex: 1;
             align-items: stretch;
             justify-content: space-between;
+            margin: auto;
         }
+
         #container div {
             display: flex;
             width: 100%;
         }
+
         #container div div {
             background-color: green;
             aspect-ratio: 1/1;
 
         }
+
         #container div div:hover {
-            background-color: lightblue
+            background-color: lightblue;
+        }
+
+        #buttons {
+            margin: auto;
+            width: var(--containerWidth);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
         }
     </style>
 </head>
+
 <body>
+    <div id="buttons">
+        <div>
+            <input type="color" id="color" name="color" value="#000000"><label for="color">Set Colour</label>
+        </div>
+        <div>
+            <input type="number" id="gridSize" name="gridSize" min="2" max="100" value="16">
+            <button id="gridSizeButton">Set Grid Size</button>
+        </div>
+    </div>
     <div id="container"></div>
 </body>
+
 </html>
